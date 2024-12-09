@@ -1,6 +1,7 @@
 UI Test Cases
 
 [Home]
+
 c1. App can be accessed
 Steps: User goes to https://thinking-tester-contact-list.herokuapp.com/
 Expected Result: Homepage opens and "Contact list app" title is displayed
@@ -31,6 +32,7 @@ Steps: Input a valid email and password and click Submit button
 Expected Result: Contact List page opens and URL contains "contactList"
 
 [Contact List]
+
 c7. Clicking "Add a New Contact" button opens Add contact page
 Preconditions: User is logged in
 Steps: Click "Add a New Contact" button
