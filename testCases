@@ -1,0 +1,52 @@
+UI Test Cases
+
+[Home]
+c1. App can be accessed
+Steps: User goes to https://thinking-tester-contact-list.herokuapp.com/
+Expected Result: Homepage opens and "Contact list app" title is displayed
+
+c2. Page elements are displayed
+Preconditions: User opens the app
+Steps: Inspect the page
+Expected Result: Elements are displayed: - Text paragraph - Log in form and submit button - sign up message and sign up button - footer
+
+c3. Clicking sign up button opens Add User page
+Preconditions: User opens the app
+Steps: Click sign up button
+Expected Result: Add User page opens and URL contains "/addUser"
+
+c4. Cancel button redirects to the previous page
+Preconditions: User is on add user page
+Steps: Click cancel button
+Expected Result: Previous page user was on opens
+
+c5. User cand be added
+Preconditions: User is on Add User page
+Steps: Fill in all fields with valid data and click submit button
+Expected Result: Contact List page opens and the contacts table is displayed - only table header without any rows
+
+c6. User can log in
+Preconditions: User opens the app
+Steps: Input a valid email and password and click Submit button
+Expected Result: Contact List page opens and URL contains "contactList"
+
+[Contact List]
+c7. Clicking "Add a New Contact" button opens Add contact page
+Preconditions: User is logged in
+Steps: Click "Add a New Contact" button
+Expected Result: Add contact page opens and URL contains "/addContact"
+
+c8. User can log out
+Preconditions: User is logged in
+Steps: Click logout button
+Expected Result: User is redirected to the homepage
+
+c9. "Return to Contact List" button redirects to Contact list page
+Preconditions: User opens Contact Details page
+Steps: Click "Return to Contact List" button
+Expected Result: Contact List page opens
+
+c10. [Add contact]Contact can be added
+Preconditions: User is on Add Contact page
+Steps: Fill in the First and Last name input fields and click Submit button
+Expected Result: User is redirected to Contact List page and the Contacts table is populated with the correct data
