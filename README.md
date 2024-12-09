@@ -11,6 +11,7 @@ Test app used: https://thinking-tester-contact-list.herokuapp.com/
 - `faker`: A library for generating fake data (e.g., names, addresses, emails) used in tests.
 - `eslint`: A linting tool to maintain code quality and style.
 - `prettier`: An opinionated code formatter for maintaining consistent formatting.
+- `allure report`: A reporter for visualizing the results of a test run.
 
 ## Installation
 
