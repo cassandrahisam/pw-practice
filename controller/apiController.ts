@@ -11,7 +11,7 @@ class APIController {
     this.apiRequest = await request.newContext({
       baseURL: config.use.baseURL,
       extraHTTPHeaders: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzRmNjE0N2FjODQ0MDAwMTNiN2I1N2MiLCJpYXQiOjE3MzM4MzAxMjF9.WFaOk7pP3u1ySU25tkbacAhTgYYkj0DmO16eSOxbyIA`,
+        Authorization: `Bearer {token}`,
       },
     });
   }
