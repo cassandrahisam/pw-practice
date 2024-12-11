@@ -26,7 +26,7 @@ export interface addContactResponse extends addContact {
   __v: number;
 }
 
-export interface addUser {
+export interface createUser {
   firstName: string;
   lastName: string;
   email: string;
