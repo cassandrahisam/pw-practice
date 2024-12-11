@@ -1,3 +1,11 @@
+export interface GetContacts {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  owner: string;
+  __v: number;
+}
+
 export interface addContact {
   firstName: string;
   lastName: string;
@@ -14,14 +22,6 @@ export interface addContact {
 
 export interface addContactResponse extends addContact {
   _id: string;
-  owner: string;
-  __v: number;
-}
-
-export interface GetContacts {
-  _id: string;
-  firstName: string;
-  lastName: string;
   owner: string;
   __v: number;
 }

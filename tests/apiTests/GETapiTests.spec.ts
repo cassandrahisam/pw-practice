@@ -6,11 +6,11 @@ test.beforeAll(async () => {
   await apiController.init();
 });
 
-test.describe("API tests", () => {
-  test("Get contacts", async () => {
+test.describe("GET API tests", () => {
+  test("GET all contacts", async () => {
     const contacts: GetContacts[] = await apiController.getContacts();
 
-    const expectedShape = {
+    const expectedResponse = {
       _id: expect.any(String),
       firstName: expect.any(String),
       lastName: expect.any(String),
@@ -18,6 +18,6 @@ test.describe("API tests", () => {
       __v: expect.any(Number),
     };
 
-    expect(contacts[0]).toMatchObject(expectedShape);
+    expect(contacts[0]).toMatchObject(expectedResponse);
   });
 });

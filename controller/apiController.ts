@@ -22,21 +22,17 @@ class APIController {
     return responseBody;
   }
 
-  async addContacts() {
-    const response = await this.apiRequest.post("/users/1/todos", {
-      data: {
-        firstName: "api",
-        lastName: "Test",
-        birthdate: "1970-01-01",
-        email: "jdoe@fake.com",
-        phone: "8005555555",
-        street1: "1 Main St.",
-        street2: "Apartment A",
-        city: "Anytown",
-        stateProvince: "KS",
-        postalCode: "12345",
-        country: "USA",
-      },
+  async addContacts(contactData) {
+    const response = await this.apiRequest.post("/contacts", {
+      data: contactData,
+    });
+
+    return await response.json();
+  }
+
+  async addUser(userDetails) {
+    const response = await this.apiRequest.post("/contacts", {
+      data: userDetails,
     });
 
     return await response.json();
