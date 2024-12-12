@@ -108,7 +108,7 @@ test.describe("Homepage feature", () => {
 
   test("User can log in", async () => {
     await homePage.login(email, pass);
-    expect(await common.getUrl()).toContain("/contactList");
+    expect(await common.getPageTitleText()).toMatch("Contact List");
   });
 });
 
