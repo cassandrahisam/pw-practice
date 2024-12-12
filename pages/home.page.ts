@@ -37,8 +37,7 @@ class HomePage {
     await common.inputValue(common.emailField, email);
     await common.inputValue(common.passField, pass);
     await common.clickSubmitButton();
-    await this.page.pause();
-    await expect(common.table).toBeVisible();
+    await expect(common.pageTitle).toBeVisible();
   }
 }
 

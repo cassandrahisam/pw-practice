@@ -66,7 +66,7 @@ class Common {
     await this.inputValue(this.emailField, email);
     await this.inputValue(this.passField, pass);
     await this.clickSubmitButton();
-    await expect(this.table).toBeVisible();
+    await expect(this.pageTitle).toBeVisible();
   }
 }
 

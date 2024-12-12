@@ -45,7 +45,6 @@ class ContactList {
     this.country = page.locator("#country");
     this.cancelButton = page.locator("#cancel");
     this.errorMessage = page.locator("#error");
-    // this.editContactButton = page.locator("#edit-contact");
     this.returnButton = page.locator("#return");
   }
 
