@@ -57,7 +57,7 @@ class ContactList {
   }
 
   async getNameFromTable() {
-    return await this.tableRow.locator("td:nth-child(2)").textContent();
+    return await this.tableRow.locator("td:nth-child(2)").first().textContent();
   }
 
   async addNewContact(
