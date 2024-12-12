@@ -50,7 +50,7 @@ test.beforeEach(async ({ page }) => {
 test.afterAll(async () => {
   // Delete created user
   if (shouldSkipCleanup) {
-    console.log('Skipping cleanup for this test.');
+    console.log("Skipping cleanup for this test.");
     return;
   }
   await apiController.deleteUser();
@@ -136,7 +136,7 @@ test.describe("Contact List Feature", () => {
 
   test('"Return to Contact List" button redirects to Contact list page', async () => {
     // Create new contact
-    await common.openUrl("addContact");
+    await contactList.clickAddContactButton();
     await contactList.addNewContact(
       firstName,
       lastName,
@@ -159,7 +159,7 @@ test.describe("Contact List Feature", () => {
   });
 
   test("Contact can be added", async () => {
-    await common.openUrl("addContact");
+    await contactList.clickAddContactButton();
     await contactList.addNewContact(
       firstName,
       lastName,
